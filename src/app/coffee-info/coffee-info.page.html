@@ -1,0 +1,22 @@
+<ion-header [translucent]="true" style="background-color: rgb(215, 73, 120);">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Coffee info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+  <ion-card style="display:inline-block;">
+    <img alt="Silhouette of mountains" src={{coffee.imgUrl}} style="width:100%"/>
+    <ion-card-header>
+      <ion-card-title>{{coffee.name}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Price: {{coffee.price}} RSD
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

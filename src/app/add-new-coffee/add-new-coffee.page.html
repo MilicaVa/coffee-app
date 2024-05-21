@@ -1,0 +1,27 @@
+<ion-header [translucent]="true" style="background-color: rgb(215, 73, 120);">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Add new coffee</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-input label="Coffee name" label-placement="floating" fill="solid" type="string" [(ngModel)]="coffeeName" required></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input label="Image URL" label-placement="floating" fill="solid"  [(ngModel)]="coffeeImage" required></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input label="Price" label-placement="floating" fill="solid" [(ngModel)]="coffeePrice" required></ion-input>
+    </ion-item>
+    <br />
+    
+    <ion-button expand="block" color="secondary" (click)="filledForm()">Add</ion-button>
+  </ion-list>
+</ion-content>

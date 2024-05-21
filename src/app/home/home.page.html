@@ -1,0 +1,33 @@
+<ion-header [translucent]="true" style="background-color: rgb(215, 73, 120);">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">My Coffee</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToAddPage()">
+        <ion-icon name="add" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-icon name="exit" slot="end" size="large" (click)="logOut()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let coffee of coffees">
+    <ion-card-header (click)="goToCoffeeInfoPage(coffee)">
+      <ion-img [src]="coffee.imgUrl" style="height: 175px;"></ion-img>
+    </ion-card-header>
+    <ion-card-content class="ion-text-center" style="color: black; font-weight: bold;">
+      <h1>{{coffee.name}}</h1>
+      <h2>{{coffee.price}} RSD</h2>
+      <br>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" (click)="goToEditPage(coffee)">Edit</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" (click)="deleteCoffee(coffee.id)">Delete</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
